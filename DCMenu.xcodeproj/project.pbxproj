@@ -16,6 +16,8 @@
 		F430EB331C23E2E5003B7690 /* DCMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB321C23E2E5003B7690 /* DCMenuUITests.m */; };
 		F430EB451C23E5B7003B7690 /* DCMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB441C23E5B7003B7690 /* DCMenu.m */; };
 		F430EB4F1C23EFC9003B7690 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB4E1C23EFC9003B7690 /* ViewController.m */; };
+		F47404ED1C5B691B00F8BD87 /* UIButton+HighlightBg.m in Sources */ = {isa = PBXBuildFile; fileRef = F47404EC1C5B691B00F8BD87 /* UIButton+HighlightBg.m */; };
+		F47404EF1C5B699B00F8BD87 /* pullmenu_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47404EE1C5B699B00F8BD87 /* pullmenu_select@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		F430EB441C23E5B7003B7690 /* DCMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMenu.m; sourceTree = "<group>"; };
 		F430EB4D1C23EFC9003B7690 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F430EB4E1C23EFC9003B7690 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F47404EB1C5B691B00F8BD87 /* UIButton+HighlightBg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HighlightBg.h"; sourceTree = "<group>"; };
+		F47404EC1C5B691B00F8BD87 /* UIButton+HighlightBg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HighlightBg.m"; sourceTree = "<group>"; };
+		F47404EE1C5B699B00F8BD87 /* pullmenu_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pullmenu_select@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,16 +109,17 @@
 		F430EB0C1C23E2E5003B7690 /* DCMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F47404EA1C5B691B00F8BD87 /* UIButton+HighlightBg */,
 				F430EB461C23E5BE003B7690 /* DCMenu */,
+				F430EB4D1C23EFC9003B7690 /* ViewController.h */,
+				F430EB4E1C23EFC9003B7690 /* ViewController.m */,
+				F430EB161C23E2E5003B7690 /* Main.storyboard */,
 				F430EB101C23E2E5003B7690 /* AppDelegate.h */,
 				F430EB111C23E2E5003B7690 /* AppDelegate.m */,
-				F430EB161C23E2E5003B7690 /* Main.storyboard */,
 				F430EB191C23E2E5003B7690 /* Assets.xcassets */,
 				F430EB1B1C23E2E5003B7690 /* LaunchScreen.storyboard */,
 				F430EB1E1C23E2E5003B7690 /* Info.plist */,
 				F430EB0D1C23E2E5003B7690 /* Supporting Files */,
-				F430EB4D1C23EFC9003B7690 /* ViewController.h */,
-				F430EB4E1C23EFC9003B7690 /* ViewController.m */,
 			);
 			path = DCMenu;
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 		F430EB0D1C23E2E5003B7690 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F47404EE1C5B699B00F8BD87 /* pullmenu_select@2x.png */,
 				F430EB0E1C23E2E5003B7690 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -151,6 +158,15 @@
 				F430EB441C23E5B7003B7690 /* DCMenu.m */,
 			);
 			name = DCMenu;
+			sourceTree = "<group>";
+		};
+		F47404EA1C5B691B00F8BD87 /* UIButton+HighlightBg */ = {
+			isa = PBXGroup;
+			children = (
+				F47404EB1C5B691B00F8BD87 /* UIButton+HighlightBg.h */,
+				F47404EC1C5B691B00F8BD87 /* UIButton+HighlightBg.m */,
+			);
+			path = "UIButton+HighlightBg";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47404EF1C5B699B00F8BD87 /* pullmenu_select@2x.png in Resources */,
 				F430EB1D1C23E2E5003B7690 /* LaunchScreen.storyboard in Resources */,
 				F430EB1A1C23E2E5003B7690 /* Assets.xcassets in Resources */,
 				F430EB181C23E2E5003B7690 /* Main.storyboard in Resources */,
@@ -284,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F430EB4F1C23EFC9003B7690 /* ViewController.m in Sources */,
+				F47404ED1C5B691B00F8BD87 /* UIButton+HighlightBg.m in Sources */,
 				F430EB121C23E2E5003B7690 /* AppDelegate.m in Sources */,
 				F430EB0F1C23E2E5003B7690 /* main.m in Sources */,
 				F430EB451C23E5B7003B7690 /* DCMenu.m in Sources */,

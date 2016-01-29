@@ -12,6 +12,7 @@
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UIButton *titleBtn;
 @property (nonatomic, strong) DCMenu *menu;
 
 @end
@@ -26,8 +27,11 @@
     
     NSArray *arr = @[@"全部", @"签到奖励", @"邀请好友奖励", @"兑换(零钱)"];
     self.menu = [[DCMenu alloc]initWithItems:arr];
+    __weak typeof(&*self) weakSelf = self;
     self.menu.itemSelected = ^(NSInteger tag) {
-        NSLog(@"选择了第%d个",tag);
+        NSLog(@"选择了第%ld个",tag);
+        __strong typeof(&*weakSelf) strongSelf = weakSelf;
+        [strongSelf.titleBtn setTitle:arr[tag] forState:UIControlStateNormal];
     };
 }
 

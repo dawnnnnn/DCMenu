@@ -7,6 +7,7 @@
 //
 
 #import "DCMenu.h"
+#import "UIButton+HighlightBg.h"
 
 #define ITEMVIEW_HEIGHT 44.f
 
@@ -33,7 +34,7 @@
 }
 
 - (void)drawView {
-    _menuView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, ITEMVIEW_HEIGHT*_items.count+64)];
+    _menuView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, ITEMVIEW_HEIGHT*_items.count+64)];
     _menuView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_menuView];
     
@@ -41,6 +42,7 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setFrame:CGRectMake(0, 64+i*ITEMVIEW_HEIGHT, _menuView.frame.size.width, ITEMVIEW_HEIGHT)];
         button.tag = 2000+i;
+        [button setBackgroundColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
         [_menuView addSubview:button];
         
@@ -48,18 +50,18 @@
         line.backgroundColor = [UIColor lightGrayColor];
         [_menuView addSubview:line];
         
-        //TODO:自行增加约束
-        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*ITEMVIEW_HEIGHT, 100, 15)];
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*ITEMVIEW_HEIGHT, _menuView.frame.size.width-50, ITEMVIEW_HEIGHT)];
         title.text = _items[i];
         title.textColor = [UIColor darkGrayColor];
         title.font = [UIFont systemFontOfSize:17];
         [_menuView addSubview:title];
         
-        UIImageView *selectImg = [[UIImageView alloc]initWithFrame:CGRectMake(_menuView.frame.size.width - 30, 64+i*ITEMVIEW_HEIGHT, 15, 15)];
-        selectImg.backgroundColor = [UIColor greenColor];
+        UIImageView *selectImg = [[UIImageView alloc]initWithFrame:CGRectMake(_menuView.frame.size.width - 30, 64+i*ITEMVIEW_HEIGHT+15, 19, 15)];
+        selectImg.image = [UIImage imageNamed:@"pullmenu_select.png"];
         selectImg.tag = 2100+i;
         selectImg.hidden = i == 0 ? NO : YES;
         [_menuView addSubview:selectImg];
+
     }
 }
 
@@ -75,12 +77,14 @@
         [views addSubview:self];
     }
     _menuView.transform = CGAffineTransformMakeTranslation(0.f, -ITEMVIEW_HEIGHT*_items.count);
-//    _menuView.alpha = 0;
-
+    self.alpha = 0;
+    //    _menuView.alpha = 0;
+    
     self.isOpen = YES;
     [UIView animateWithDuration:.7f delay:0.f usingSpringWithDamping:.7f initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _menuView.transform = CGAffineTransformMakeTranslation(0.f, 0.f);
-//        _menuView.alpha = 1.0;
+        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -64.f);
+        //        _menuView.alpha = 1.0;
+        self.alpha = 1.0;
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3f];
     } completion:nil];
 }
@@ -88,11 +92,13 @@
 - (void)close {
     self.isOpen = NO;
     [UIView animateWithDuration:0.3f animations:^{
-        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -ITEMVIEW_HEIGHT*_items.count);
-//        _menuView.alpha = 0;
-//        self.alpha = 0;
+        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -ITEMVIEW_HEIGHT*_items.count-64);
+        //        _menuView.alpha = 0;
+        //        self.alpha = 0;
         self.backgroundColor = [UIColor clearColor];
-    } completion:nil];
+    } completion:^(BOOL finish){
+        self.alpha = 0;
+    }];
 }
 
 - (void)buttonSelected:(UIButton*)sender {

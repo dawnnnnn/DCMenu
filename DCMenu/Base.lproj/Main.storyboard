@@ -51,7 +51,7 @@
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y34-br-DXZ">
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="aaaa"/>
+                            <state key="normal" title="ButtonTitle"/>
                             <connections>
                                 <action selector="pullMenu:" destination="XGt-ZT-iY4" eventType="touchUpInside" id="SNJ-cp-9Iy"/>
                             </connections>
@@ -59,50 +59,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="glz-qw-AsL" id="w9t-cH-HqK"/>
+                        <outlet property="titleBtn" destination="y34-br-DXZ" id="kG2-0I-dAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3Z-lX-LNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-199" y="55"/>
-        </scene>
-        <!--Menu Table View Controller-->
-        <scene sceneID="XCB-4W-m3c">
-            <objects>
-                <tableViewController id="4Jy-eE-vmt" customClass="DCMenuTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Dq-kW-qxH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hahaha" id="tSD-Ps-cqc">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSD-Ps-cqc" id="Ent-WE-weg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4Jy-eE-vmt" id="rNQ-a5-5u6"/>
-                            <outlet property="delegate" destination="4Jy-eE-vmt" id="eIN-Ey-oRI"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="gZs-i2-5D8">
-                        <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rnp-76-MHb">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="pullMenu:" destination="4Jy-eE-vmt" eventType="touchUpInside" id="ETi-Zp-RGI"/>
-                            </connections>
-                        </button>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iaY-C7-u0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-64" y="154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5H0-2q-41X">
