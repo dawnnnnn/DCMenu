@@ -1,18 +1,18 @@
-# DCMenu
+# DNPullDownMenu
 
 A simple pull menu for iOS.
 iOS开发中简单的下拉菜单。
 
 
-# Preview 预览
-![screenshots](https://raw.githubusercontent.com/dawnnnnn/DCMenu/master/screenshots/DCMenu.gif)
+## Preview 预览
+![screenshots](https://raw.githubusercontent.com/dawnnnnn/DNPullDownMenu/master/screenshots/DCMenu.gif)
 
 
-# Usage 使用
+## Usage 使用
 Init 初始化
 ``` objc
 	NSArray *arr = @[@"全部", @"签到奖励", @"邀请好友奖励", @"兑换(零钱)"];
-    self.menu = [[DCMenu alloc]initWithItems:arr];
+    self.menu = [[DNPullDownMenu alloc]initWithItems:arr];
     self.menu.itemSelected = ^(NSInteger tag) {
         // 选择了第tag个
         [strongSelf.titleBtn setTitle:arr[tag] forState:UIControlStateNormal];
@@ -31,6 +31,9 @@ button clicked 按钮点击时
     }
 ```
 
-# License  
+## Update
+2017/1/31: rename DCMenu to DNPullDownMenu
+
+## License  
 MIT
 
