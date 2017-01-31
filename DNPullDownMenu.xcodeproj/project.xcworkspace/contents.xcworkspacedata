@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DCMenu.xcodeproj">
+      location = "self:/Users/dawnsmac/myGit/DCMenu/DNPullDownMenu.xcodeproj">
    </FileRef>
 </Workspace>

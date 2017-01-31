@@ -1,6 +1,6 @@
 //
-//  DCMenu.h
-//  DCMenu
+//  DNPullDownMenu.h
+//  DNPullDownMenu
 //
 //  Created by dawnnnnn on 15/12/18.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCMenu : UIView
+@interface DNPullDownMenu : UIView
 
 - (id)initWithItems:(NSArray *)items;
 - (void)open:(UIView *)view;

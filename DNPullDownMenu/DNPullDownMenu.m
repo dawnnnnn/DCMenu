@@ -1,24 +1,24 @@
 //
-//  DCMenu.m
-//  DCMenu
+//  DNPullDownMenu.h
+//  DNPullDownMenu
 //
 //  Created by dawnnnnn on 15/12/18.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
 //
 
-#import "DCMenu.h"
+#import "DNPullDownMenu.h"
 #import "UIButton+HighlightBg.h"
 
 #define ITEMVIEW_HEIGHT 44.f
 
-@interface DCMenu ()
+@interface DNPullDownMenu ()
 
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, strong) UIView *menuView;
 
 @end
 
-@implementation DCMenu
+@implementation DNPullDownMenu
 
 - (id)initWithItems:(NSArray *)items
 {
@@ -68,7 +68,7 @@
 - (void)open:(UIView *)views {
     BOOL isHave = NO;
     for (id obj in [views subviews]) {
-        if ([obj isKindOfClass:[DCMenu class]] ) {
+        if ([obj isKindOfClass:[DNPullDownMenu class]] ) {
             isHave = YES;
             break;
         }

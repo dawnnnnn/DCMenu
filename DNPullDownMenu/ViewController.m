@@ -1,19 +1,19 @@
 //
 //  ViewController.m
-//  DCMenu
+//  DNPullDownMenu
 //
 //  Created by dawnnnnn on 15/12/18.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "DCMenu.h"
+#import "DNPullDownMenu.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UIButton *titleBtn;
-@property (nonatomic, strong) DCMenu *menu;
+@property (nonatomic, strong) DNPullDownMenu *menu;
 
 @end
 
@@ -26,7 +26,7 @@
     self.myTableView.dataSource = self;
     
     NSArray *arr = @[@"全部", @"签到奖励", @"邀请好友奖励", @"兑换(零钱)"];
-    self.menu = [[DCMenu alloc]initWithItems:arr];
+    self.menu = [[DNPullDownMenu alloc]initWithItems:arr];
     __weak typeof(&*self) weakSelf = self;
     self.menu.itemSelected = ^(NSInteger tag) {
         NSLog(@"选择了第%ld个",tag);

@@ -12,9 +12,9 @@
 		F430EB181C23E2E5003B7690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F430EB161C23E2E5003B7690 /* Main.storyboard */; };
 		F430EB1A1C23E2E5003B7690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F430EB191C23E2E5003B7690 /* Assets.xcassets */; };
 		F430EB1D1C23E2E5003B7690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F430EB1B1C23E2E5003B7690 /* LaunchScreen.storyboard */; };
-		F430EB281C23E2E5003B7690 /* DCMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB271C23E2E5003B7690 /* DCMenuTests.m */; };
-		F430EB331C23E2E5003B7690 /* DCMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB321C23E2E5003B7690 /* DCMenuUITests.m */; };
-		F430EB451C23E5B7003B7690 /* DCMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB441C23E5B7003B7690 /* DCMenu.m */; };
+		F430EB281C23E2E5003B7690 /* DNPullDownMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB271C23E2E5003B7690 /* DNPullDownMenuTests.m */; };
+		F430EB331C23E2E5003B7690 /* DNPullDownMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB321C23E2E5003B7690 /* DNPullDownMenuUITests.m */; };
+		F430EB451C23E5B7003B7690 /* DNPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB441C23E5B7003B7690 /* DNPullDownMenu.m */; };
 		F430EB4F1C23EFC9003B7690 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F430EB4E1C23EFC9003B7690 /* ViewController.m */; };
 		F47404ED1C5B691B00F8BD87 /* UIButton+HighlightBg.m in Sources */ = {isa = PBXBuildFile; fileRef = F47404EC1C5B691B00F8BD87 /* UIButton+HighlightBg.m */; };
 		F47404EF1C5B699B00F8BD87 /* pullmenu_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F47404EE1C5B699B00F8BD87 /* pullmenu_select@2x.png */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F430EB0A1C23E2E5003B7690 /* DCMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F430EB0A1C23E2E5003B7690 /* DNPullDownMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNPullDownMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F430EB0E1C23E2E5003B7690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F430EB101C23E2E5003B7690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F430EB111C23E2E5003B7690 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,14 +46,14 @@
 		F430EB191C23E2E5003B7690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F430EB1C1C23E2E5003B7690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F430EB1E1C23E2E5003B7690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F430EB231C23E2E5003B7690 /* DCMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F430EB271C23E2E5003B7690 /* DCMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCMenuTests.m; sourceTree = "<group>"; };
+		F430EB231C23E2E5003B7690 /* DNPullDownMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNPullDownMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F430EB271C23E2E5003B7690 /* DNPullDownMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNPullDownMenuTests.m; sourceTree = "<group>"; };
 		F430EB291C23E2E5003B7690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F430EB2E1C23E2E5003B7690 /* DCMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F430EB321C23E2E5003B7690 /* DCMenuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCMenuUITests.m; sourceTree = "<group>"; };
+		F430EB2E1C23E2E5003B7690 /* DNPullDownMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNPullDownMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F430EB321C23E2E5003B7690 /* DNPullDownMenuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNPullDownMenuUITests.m; sourceTree = "<group>"; };
 		F430EB341C23E2E5003B7690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F430EB431C23E5B7003B7690 /* DCMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMenu.h; sourceTree = "<group>"; };
-		F430EB441C23E5B7003B7690 /* DCMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMenu.m; sourceTree = "<group>"; };
+		F430EB431C23E5B7003B7690 /* DNPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNPullDownMenu.h; sourceTree = "<group>"; };
+		F430EB441C23E5B7003B7690 /* DNPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNPullDownMenu.m; sourceTree = "<group>"; };
 		F430EB4D1C23EFC9003B7690 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F430EB4E1C23EFC9003B7690 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F47404EB1C5B691B00F8BD87 /* UIButton+HighlightBg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HighlightBg.h"; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		F430EB011C23E2E5003B7690 = {
 			isa = PBXGroup;
 			children = (
-				F430EB0C1C23E2E5003B7690 /* DCMenu */,
-				F430EB261C23E2E5003B7690 /* DCMenuTests */,
-				F430EB311C23E2E5003B7690 /* DCMenuUITests */,
+				F430EB0C1C23E2E5003B7690 /* DNPullDownMenu */,
+				F430EB261C23E2E5003B7690 /* DNPullDownMenuTests */,
+				F430EB311C23E2E5003B7690 /* DNPullDownMenuUITests */,
 				F430EB0B1C23E2E5003B7690 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,18 +99,18 @@
 		F430EB0B1C23E2E5003B7690 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F430EB0A1C23E2E5003B7690 /* DCMenu.app */,
-				F430EB231C23E2E5003B7690 /* DCMenuTests.xctest */,
-				F430EB2E1C23E2E5003B7690 /* DCMenuUITests.xctest */,
+				F430EB0A1C23E2E5003B7690 /* DNPullDownMenu.app */,
+				F430EB231C23E2E5003B7690 /* DNPullDownMenuTests.xctest */,
+				F430EB2E1C23E2E5003B7690 /* DNPullDownMenuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F430EB0C1C23E2E5003B7690 /* DCMenu */ = {
+		F430EB0C1C23E2E5003B7690 /* DNPullDownMenu */ = {
 			isa = PBXGroup;
 			children = (
 				F47404EA1C5B691B00F8BD87 /* UIButton+HighlightBg */,
-				F430EB461C23E5BE003B7690 /* DCMenu */,
+				F430EB461C23E5BE003B7690 /* DNPullDownMenu */,
 				F430EB4D1C23EFC9003B7690 /* ViewController.h */,
 				F430EB4E1C23EFC9003B7690 /* ViewController.m */,
 				F430EB161C23E2E5003B7690 /* Main.storyboard */,
@@ -121,7 +121,7 @@
 				F430EB1E1C23E2E5003B7690 /* Info.plist */,
 				F430EB0D1C23E2E5003B7690 /* Supporting Files */,
 			);
-			path = DCMenu;
+			path = DNPullDownMenu;
 			sourceTree = "<group>";
 		};
 		F430EB0D1C23E2E5003B7690 /* Supporting Files */ = {
@@ -133,31 +133,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F430EB261C23E2E5003B7690 /* DCMenuTests */ = {
+		F430EB261C23E2E5003B7690 /* DNPullDownMenuTests */ = {
 			isa = PBXGroup;
 			children = (
-				F430EB271C23E2E5003B7690 /* DCMenuTests.m */,
+				F430EB271C23E2E5003B7690 /* DNPullDownMenuTests.m */,
 				F430EB291C23E2E5003B7690 /* Info.plist */,
 			);
-			path = DCMenuTests;
+			path = DNPullDownMenuTests;
 			sourceTree = "<group>";
 		};
-		F430EB311C23E2E5003B7690 /* DCMenuUITests */ = {
+		F430EB311C23E2E5003B7690 /* DNPullDownMenuUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F430EB321C23E2E5003B7690 /* DCMenuUITests.m */,
+				F430EB321C23E2E5003B7690 /* DNPullDownMenuUITests.m */,
 				F430EB341C23E2E5003B7690 /* Info.plist */,
 			);
-			path = DCMenuUITests;
+			path = DNPullDownMenuUITests;
 			sourceTree = "<group>";
 		};
-		F430EB461C23E5BE003B7690 /* DCMenu */ = {
+		F430EB461C23E5BE003B7690 /* DNPullDownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				F430EB431C23E5B7003B7690 /* DCMenu.h */,
-				F430EB441C23E5B7003B7690 /* DCMenu.m */,
+				F430EB431C23E5B7003B7690 /* DNPullDownMenu.h */,
+				F430EB441C23E5B7003B7690 /* DNPullDownMenu.m */,
 			);
-			name = DCMenu;
+			name = DNPullDownMenu;
 			sourceTree = "<group>";
 		};
 		F47404EA1C5B691B00F8BD87 /* UIButton+HighlightBg */ = {
@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F430EB091C23E2E5003B7690 /* DCMenu */ = {
+		F430EB091C23E2E5003B7690 /* DNPullDownMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F430EB371C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DCMenu" */;
+			buildConfigurationList = F430EB371C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DNPullDownMenu" */;
 			buildPhases = (
 				F430EB061C23E2E5003B7690 /* Sources */,
 				F430EB071C23E2E5003B7690 /* Frameworks */,
@@ -184,14 +184,14 @@
 			);
 			dependencies = (
 			);
-			name = DCMenu;
+			name = DNPullDownMenu;
 			productName = DCMenu;
-			productReference = F430EB0A1C23E2E5003B7690 /* DCMenu.app */;
+			productReference = F430EB0A1C23E2E5003B7690 /* DNPullDownMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F430EB221C23E2E5003B7690 /* DCMenuTests */ = {
+		F430EB221C23E2E5003B7690 /* DNPullDownMenuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F430EB3A1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DCMenuTests" */;
+			buildConfigurationList = F430EB3A1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DNPullDownMenuTests" */;
 			buildPhases = (
 				F430EB1F1C23E2E5003B7690 /* Sources */,
 				F430EB201C23E2E5003B7690 /* Frameworks */,
@@ -202,14 +202,14 @@
 			dependencies = (
 				F430EB251C23E2E5003B7690 /* PBXTargetDependency */,
 			);
-			name = DCMenuTests;
+			name = DNPullDownMenuTests;
 			productName = DCMenuTests;
-			productReference = F430EB231C23E2E5003B7690 /* DCMenuTests.xctest */;
+			productReference = F430EB231C23E2E5003B7690 /* DNPullDownMenuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F430EB2D1C23E2E5003B7690 /* DCMenuUITests */ = {
+		F430EB2D1C23E2E5003B7690 /* DNPullDownMenuUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F430EB3D1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DCMenuUITests" */;
+			buildConfigurationList = F430EB3D1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DNPullDownMenuUITests" */;
 			buildPhases = (
 				F430EB2A1C23E2E5003B7690 /* Sources */,
 				F430EB2B1C23E2E5003B7690 /* Frameworks */,
@@ -220,9 +220,9 @@
 			dependencies = (
 				F430EB301C23E2E5003B7690 /* PBXTargetDependency */,
 			);
-			name = DCMenuUITests;
+			name = DNPullDownMenuUITests;
 			productName = DCMenuUITests;
-			productReference = F430EB2E1C23E2E5003B7690 /* DCMenuUITests.xctest */;
+			productReference = F430EB2E1C23E2E5003B7690 /* DNPullDownMenuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F430EB051C23E2E5003B7690 /* Build configuration list for PBXProject "DCMenu" */;
+			buildConfigurationList = F430EB051C23E2E5003B7690 /* Build configuration list for PBXProject "DNPullDownMenu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,9 +260,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F430EB091C23E2E5003B7690 /* DCMenu */,
-				F430EB221C23E2E5003B7690 /* DCMenuTests */,
-				F430EB2D1C23E2E5003B7690 /* DCMenuUITests */,
+				F430EB091C23E2E5003B7690 /* DNPullDownMenu */,
+				F430EB221C23E2E5003B7690 /* DNPullDownMenuTests */,
+				F430EB2D1C23E2E5003B7690 /* DNPullDownMenuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 				F47404ED1C5B691B00F8BD87 /* UIButton+HighlightBg.m in Sources */,
 				F430EB121C23E2E5003B7690 /* AppDelegate.m in Sources */,
 				F430EB0F1C23E2E5003B7690 /* main.m in Sources */,
-				F430EB451C23E5B7003B7690 /* DCMenu.m in Sources */,
+				F430EB451C23E5B7003B7690 /* DNPullDownMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F430EB281C23E2E5003B7690 /* DCMenuTests.m in Sources */,
+				F430EB281C23E2E5003B7690 /* DNPullDownMenuTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F430EB331C23E2E5003B7690 /* DCMenuUITests.m in Sources */,
+				F430EB331C23E2E5003B7690 /* DNPullDownMenuUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,12 +329,12 @@
 /* Begin PBXTargetDependency section */
 		F430EB251C23E2E5003B7690 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F430EB091C23E2E5003B7690 /* DCMenu */;
+			target = F430EB091C23E2E5003B7690 /* DNPullDownMenu */;
 			targetProxy = F430EB241C23E2E5003B7690 /* PBXContainerItemProxy */;
 		};
 		F430EB301C23E2E5003B7690 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F430EB091C23E2E5003B7690 /* DCMenu */;
+			target = F430EB091C23E2E5003B7690 /* DNPullDownMenu */;
 			targetProxy = F430EB2F1C23E2E5003B7690 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -443,10 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DCMenu/Info.plist;
+				INFOPLIST_FILE = DNPullDownMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmist.DNPullDownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -455,10 +455,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DCMenu/Info.plist;
+				INFOPLIST_FILE = DNPullDownMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmist.DNPullDownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -467,11 +467,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DCMenuTests/Info.plist;
+				INFOPLIST_FILE = DNPullDownMenuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCMenuTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmist.DNPullDownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCMenu.app/DCMenu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNPullDownMenu.app/DNPullDownMenu";
 			};
 			name = Debug;
 		};
@@ -479,22 +479,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DCMenuTests/Info.plist;
+				INFOPLIST_FILE = DNPullDownMenuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCMenuTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmist.DNPullDownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCMenu.app/DCMenu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DNPullDownMenu.app/DNPullDownMenu";
 			};
 			name = Release;
 		};
 		F430EB3E1C23E2E5003B7690 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DCMenuUITests/Info.plist;
+				INFOPLIST_FILE = DNPullDownMenuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCMenuUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmist.DNPullDownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DCMenu;
+				TEST_TARGET_NAME = DNPullDownMenu;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -502,11 +502,11 @@
 		F430EB3F1C23E2E5003B7690 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DCMenuUITests/Info.plist;
+				INFOPLIST_FILE = DNPullDownMenuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laxiong.DCMenuUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redmist.DNPullDownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DCMenu;
+				TEST_TARGET_NAME = DNPullDownMenu;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;
@@ -514,7 +514,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F430EB051C23E2E5003B7690 /* Build configuration list for PBXProject "DCMenu" */ = {
+		F430EB051C23E2E5003B7690 /* Build configuration list for PBXProject "DNPullDownMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F430EB351C23E2E5003B7690 /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F430EB371C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DCMenu" */ = {
+		F430EB371C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DNPullDownMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F430EB381C23E2E5003B7690 /* Debug */,
@@ -532,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F430EB3A1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DCMenuTests" */ = {
+		F430EB3A1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DNPullDownMenuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F430EB3B1C23E2E5003B7690 /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F430EB3D1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DCMenuUITests" */ = {
+		F430EB3D1C23E2E5003B7690 /* Build configuration list for PBXNativeTarget "DNPullDownMenuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F430EB3E1C23E2E5003B7690 /* Debug */,

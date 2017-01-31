@@ -1,6 +1,6 @@
 //
-//  DCMenuTests.m
-//  DCMenuTests
+//  DNPullDownMenuTests.m
+//  DNPullDownMenuTests
 //
 //  Created by dawnnnnn on 15/12/18.
 //  Copyright © 2015年 dawnnnnn. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface DCMenuTests : XCTestCase
+@interface DNPullDownMenuTests : XCTestCase
 
 @end
 
-@implementation DCMenuTests
+@implementation DNPullDownMenuTests
 
 - (void)setUp {
     [super setUp];
