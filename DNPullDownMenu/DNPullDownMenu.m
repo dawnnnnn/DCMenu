@@ -9,7 +9,7 @@
 #import "DNPullDownMenu.h"
 #import "UIButton+HighlightBg.h"
 
-#define ITEMVIEW_HEIGHT 44.f
+static CGFloat const kItemViewHeight = 44.f;
 
 @interface DNPullDownMenu ()
 
@@ -34,29 +34,29 @@
 }
 
 - (void)drawView {
-    _menuView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, ITEMVIEW_HEIGHT*_items.count+64)];
+    _menuView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, kItemViewHeight*_items.count+64)];
     _menuView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_menuView];
     
     for (int i = 0; i < _items.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setFrame:CGRectMake(0, 64+i*ITEMVIEW_HEIGHT, _menuView.frame.size.width, ITEMVIEW_HEIGHT)];
+        [button setFrame:CGRectMake(0, 64+i*kItemViewHeight, _menuView.frame.size.width, kItemViewHeight)];
         button.tag = 2000+i;
         [button setBackgroundColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
         [_menuView addSubview:button];
         
-        UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*ITEMVIEW_HEIGHT, _menuView.frame.size.width-15, 0.5)];
+        UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*kItemViewHeight, _menuView.frame.size.width-15, 0.5)];
         line.backgroundColor = [UIColor lightGrayColor];
         [_menuView addSubview:line];
         
-        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*ITEMVIEW_HEIGHT, _menuView.frame.size.width-50, ITEMVIEW_HEIGHT)];
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*kItemViewHeight, _menuView.frame.size.width-50, kItemViewHeight)];
         title.text = _items[i];
         title.textColor = [UIColor darkGrayColor];
         title.font = [UIFont systemFontOfSize:17];
         [_menuView addSubview:title];
         
-        UIImageView *selectImg = [[UIImageView alloc]initWithFrame:CGRectMake(_menuView.frame.size.width - 30, 64+i*ITEMVIEW_HEIGHT+15, 19, 15)];
+        UIImageView *selectImg = [[UIImageView alloc]initWithFrame:CGRectMake(_menuView.frame.size.width - 30, 64+i*kItemViewHeight+15, 19, 15)];
         selectImg.image = [UIImage imageNamed:@"pullmenu_select.png"];
         selectImg.tag = 2100+i;
         selectImg.hidden = i == 0 ? NO : YES;
@@ -76,7 +76,7 @@
     if (isHave == NO) {
         [views addSubview:self];
     }
-    _menuView.transform = CGAffineTransformMakeTranslation(0.f, -ITEMVIEW_HEIGHT*_items.count);
+    _menuView.transform = CGAffineTransformMakeTranslation(0.f, -kItemViewHeight*_items.count);
     self.alpha = 0;
     //    _menuView.alpha = 0;
     
@@ -92,7 +92,7 @@
 - (void)close {
     self.isOpen = NO;
     [UIView animateWithDuration:0.3f animations:^{
-        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -ITEMVIEW_HEIGHT*_items.count-64);
+        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -kItemViewHeight*_items.count-64);
         //        _menuView.alpha = 0;
         //        self.alpha = 0;
         self.backgroundColor = [UIColor clearColor];
