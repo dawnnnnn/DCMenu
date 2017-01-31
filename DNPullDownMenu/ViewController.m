@@ -44,8 +44,7 @@
     
     if (self.menu.isOpen) {
         [self.menu close];
-    }
-    else {
+    } else {
         [self.menu open:self.view];
         [self.view sendSubviewToBack:self.myTableView];
     }
@@ -55,13 +54,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 100;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

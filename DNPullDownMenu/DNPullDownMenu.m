@@ -9,58 +9,63 @@
 #import "DNPullDownMenu.h"
 #import "UIButton+HighlightBg.h"
 
-static CGFloat const kItemViewHeight = 44.f;
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+static CGFloat const kItemViewHeight    = 44.f;
+static CGFloat const kNavBarHeight      = 64.f;
+static CGFloat const kCommonPaddingLRTB = 15.f;
 
 @interface DNPullDownMenu ()
 
-@property (nonatomic, copy) NSArray *items;
 @property (nonatomic, strong) UIView *menuView;
+
+@property (nonatomic, copy) NSArray *items;
 
 @end
 
 @implementation DNPullDownMenu
 
-- (id)initWithItems:(NSArray *)items
-{
+- (id)initWithItems:(NSArray *)items {
     self = [self init];
     if (self) {
         self.frame = [UIScreen mainScreen].bounds;
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3f];
         
-        _items = items;
-        [self drawView];
+        self.items = items;
+        
+        [self viewAddSubviews];
     }
     return self;
 }
 
-- (void)drawView {
-    _menuView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, kItemViewHeight*_items.count+64)];
-    _menuView.backgroundColor = [UIColor whiteColor];
-    [self addSubview:_menuView];
+- (void)viewAddSubviews {
     
-    for (int i = 0; i < _items.count; i++) {
+    [self addSubview:self.menuView];
+    
+    for (int i = 0; i < self.items.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setFrame:CGRectMake(0, 64+i*kItemViewHeight, _menuView.frame.size.width, kItemViewHeight)];
+        [button setFrame:CGRectMake(0, kNavBarHeight + i * kItemViewHeight, self.menuView.frame.size.width, kItemViewHeight)];
         button.tag = 2000+i;
         [button setBackgroundColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
-        [_menuView addSubview:button];
+        [self.menuView addSubview:button];
         
-        UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*kItemViewHeight, _menuView.frame.size.width-15, 0.5)];
+        UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(kCommonPaddingLRTB, kNavBarHeight + i * kItemViewHeight, self.menuView.frame.size.width-kCommonPaddingLRTB, 0.5)];
         line.backgroundColor = [UIColor lightGrayColor];
-        [_menuView addSubview:line];
+        [self.menuView addSubview:line];
         
-        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(15, 64+i*kItemViewHeight, _menuView.frame.size.width-50, kItemViewHeight)];
-        title.text = _items[i];
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(kCommonPaddingLRTB, kNavBarHeight + i * kItemViewHeight, self.menuView.frame.size.width - 50, kItemViewHeight)];
+        title.text = self.items[i];
         title.textColor = [UIColor darkGrayColor];
         title.font = [UIFont systemFontOfSize:17];
-        [_menuView addSubview:title];
+        [self.menuView addSubview:title];
         
-        UIImageView *selectImg = [[UIImageView alloc]initWithFrame:CGRectMake(_menuView.frame.size.width - 30, 64+i*kItemViewHeight+15, 19, 15)];
+        UIImageView *selectImg = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - kCommonPaddingLRTB * 2, kNavBarHeight + i * kItemViewHeight + kCommonPaddingLRTB, 19, kCommonPaddingLRTB)];
         selectImg.image = [UIImage imageNamed:@"pullmenu_select.png"];
-        selectImg.tag = 2100+i;
+        selectImg.tag = 2100 + i;
         selectImg.hidden = i == 0 ? NO : YES;
-        [_menuView addSubview:selectImg];
+        [self.menuView addSubview:selectImg];
 
     }
 }
@@ -76,14 +81,14 @@ static CGFloat const kItemViewHeight = 44.f;
     if (isHave == NO) {
         [views addSubview:self];
     }
-    _menuView.transform = CGAffineTransformMakeTranslation(0.f, -kItemViewHeight*_items.count);
+    self.menuView.transform = CGAffineTransformMakeTranslation(0.f, -kItemViewHeight * self.items.count);
     self.alpha = 0;
-    //    _menuView.alpha = 0;
+    //    self.menuView.alpha = 0;
     
     self.isOpen = YES;
     [UIView animateWithDuration:.7f delay:0.f usingSpringWithDamping:.7f initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -64.f);
-        //        _menuView.alpha = 1.0;
+        self.menuView.transform = CGAffineTransformMakeTranslation(0.f, -kNavBarHeight);
+        //        self.menuView.alpha = 1.0;
         self.alpha = 1.0;
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.3f];
     } completion:nil];
@@ -92,8 +97,8 @@ static CGFloat const kItemViewHeight = 44.f;
 - (void)close {
     self.isOpen = NO;
     [UIView animateWithDuration:0.3f animations:^{
-        _menuView.transform = CGAffineTransformMakeTranslation(0.f, -kItemViewHeight*_items.count-64);
-        //        _menuView.alpha = 0;
+        self.menuView.transform = CGAffineTransformMakeTranslation(0.f, -kItemViewHeight * self.items.count - kNavBarHeight);
+        //        self.menuView.alpha = 0;
         //        self.alpha = 0;
         self.backgroundColor = [UIColor clearColor];
     } completion:^(BOOL finish){
@@ -102,17 +107,16 @@ static CGFloat const kItemViewHeight = 44.f;
 }
 
 - (void)buttonSelected:(UIButton*)sender {
-    for (int i = 0; i < _items.count; i++) {
-        UIImageView *selectImg = [_menuView viewWithTag:2100+i];
-        if (sender.tag == i+2000) {
+    for (int i = 0; i < self.items.count; i++) {
+        UIImageView *selectImg = [self.menuView viewWithTag:2100 + i];
+        if (sender.tag == i + 2000) {
             selectImg.hidden = NO;
-        }
-        else {
+        } else {
             selectImg.hidden = YES;
         }
     }
-    if (_itemSelected) {
-        _itemSelected(sender.tag-2000);
+    if (self.itemSelected) {
+        self.itemSelected(sender.tag - 2000);
     }
     [self close];
 }
@@ -121,5 +125,14 @@ static CGFloat const kItemViewHeight = 44.f;
     [self close];
 }
 
+#pragma mark - getter
+
+- (UIView *)menuView {
+    if (_menuView == nil) {
+        _menuView = [[UIView alloc]initWithFrame:CGRectMake(0, kNavBarHeight, SCREEN_WIDTH, kItemViewHeight * self.items.count + kNavBarHeight)];
+        _menuView.backgroundColor = [UIColor whiteColor];
+    }
+    return _menuView;
+}
 
 @end
